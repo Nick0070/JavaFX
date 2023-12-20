@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="867.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kyrsova1.MainController">
+   <children>
+      <AnchorPane prefHeight="61.0" prefWidth="867.0" style="-fx-background-color: #2E3330;">
+
+         <children>
+            <Label alignment="TOP_RIGHT" layoutX="334.0" layoutY="14.0" text="Автомастерская" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="445.0" prefHeight="61.0" prefWidth="867.0" style="-fx-background-color: #2E3330;">
+         <children>
+            <Label layoutX="370.0" layoutY="21.0" text="Курсовая работа" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="59.0" prefHeight="387.0" prefWidth="867.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="123.0" prefHeight="71.0" prefWidth="147.0">
+               <children>
+                  <Button fx:id="Bdrepair" layoutX="32.0" layoutY="25.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Бд запчастей" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="706.0" layoutY="123.0" prefHeight="71.0" prefWidth="147.0">
+               <children>
+                  <Button fx:id="buttonKlient" layoutX="21.0" layoutY="25.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="83.0" style="-fx-background-color: green;" text="Бд клиентов" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

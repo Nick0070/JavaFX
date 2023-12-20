@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kyrsova1.Bdklient">
+   <children>
+      <AnchorPane layoutX="-8.0" prefHeight="61.0" prefWidth="875.0" style="-fx-background-color: #2E3330;">
+         <children>
+            <Label alignment="TOP_RIGHT" layoutX="338.0" layoutY="14.0" text="Автомастерская" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-3.0" layoutY="436.0" prefHeight="77.0" prefWidth="870.0" style="-fx-background-color: #2E3330;">
+         <children>
+            <Label layoutX="399.0" layoutY="29.0" text="Курсовая работа" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="61.0" prefHeight="379.0" prefWidth="867.0" style="-fx-background-color: #2E3348;">
+         <children>
+            <Button fx:id="Back_button" layoutX="25.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: Green;" text="Назад" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="321.0" layoutY="17.0" text="Таблица с данными клиентов" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
