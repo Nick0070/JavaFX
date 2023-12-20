@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        //прошлый метод перехода между окнами
 //       ((MainController)(fxmlLoader.getController())).mainStage = primaryStage;
 //       ((Bdklient)(fxmlLoader.getController())).backstage = primaryStage;
     }
