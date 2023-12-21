@@ -31,10 +31,7 @@ public class Bdrepair {
             stage.setScene(new Scene(root));
             stage.show();
         }  );
-
-
     }
-
 }
 
 
