@@ -32,9 +32,9 @@
                   <Font name="Times New Roman" size="29.0" />
                </font>
             </Label>
-            <PasswordField layoutX="368.0" layoutY="168.0" promptText="Пароль" />
-            <TextField layoutX="368.0" layoutY="129.0" promptText="Логин" />
-            <Button layoutX="420.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Войти" textFill="WHITE">
+            <PasswordField fx:id="passtextfield" layoutX="368.0" layoutY="168.0" promptText="Пароль" />
+            <TextField fx:id="logintextfield" layoutX="368.0" layoutY="129.0" promptText="Логин" />
+            <Button fx:id="loginbutton" layoutX="420.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Войти" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="13.0" />
                </font>
