@@ -24,22 +24,37 @@ public class login {
             String enteredLogin = logintextfield.getText().trim();
             String enteredPassword = passtextfield.getText().trim();
 
-            if ("admin".equals(enteredLogin) && "admin".equals(enteredPassword)) {
-                loginbutton.getScene().getWindow().hide();
+            if (!enteredLogin.equals("") && !enteredPassword.equals("")){
+                loginUser(enteredLogin,enteredPassword );
+            }  else
+                System.out.println("Eror");
 
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("Main.fxml"));
 
-                try {
-                    loader.load();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                Parent root = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.show();
-            }
+//            if ("admin".equals(enteredLogin) && "admin".equals(enteredPassword)) {
+//                loginbutton.getScene().getWindow().hide();
+//
+//                FXMLLoader loader = new FXMLLoader();
+//                loader.setLocation(getClass().getResource("Main.fxml"));
+//
+//                try {
+//                    loader.load();
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                }
+//                Parent root = loader.getRoot();
+//                Stage stage = new Stage();
+//                stage.setScene(new Scene(root));
+//                stage.show();
+//            }
+
+
+
         });
+    }
+
+    private void loginUser(String enteredLogin, String enteredPassword) {
+
+
+
     }
 }
