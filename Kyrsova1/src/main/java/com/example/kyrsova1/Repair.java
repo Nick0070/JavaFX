@@ -2,7 +2,7 @@ package com.example.kyrsova1;
 
 public class Repair extends Const {
     // Поля таблицы ремонта
-    private int idzapchasti;
+    private int idzaphasti;
     private String Name;
     private String kolvo;
     private String marka;
@@ -11,11 +11,11 @@ public class Repair extends Const {
     // Геттеры и сеттеры для полей
 
     public int getIdZapchasti() {
-        return idzapchasti;
+        return idzaphasti;
     }
 
-    public void setIdZapchasti(int idzapchasti) {
-        this.idzapchasti = idzapchasti;
+    public void setIdZapchasti(int idzaphasti) {
+        this.idzaphasti = idzaphasti;
     }
 
     public String getName() {
