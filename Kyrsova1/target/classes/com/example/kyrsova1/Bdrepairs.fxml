@@ -38,7 +38,7 @@
             </Label>
             <TableView fx:id="Bdreapair" layoutX="109.0" layoutY="82.0" prefHeight="282.0" prefWidth="666.0">
               <columns>
-                <TableColumn fx:id="idZaphasti" prefWidth="75.0" text="IdЗапчасти" />
+                <TableColumn fx:id="idColumn2" prefWidth="75.0" text="IdЗапчасти" />
                 <TableColumn fx:id="Name_zaphacti" prefWidth="188.0" text="Название" />
                   <TableColumn fx:id="kolvo" prefWidth="124.0" text="Количество" />
                   <TableColumn fx:id="marka" prefWidth="110.0" text="Марка" />

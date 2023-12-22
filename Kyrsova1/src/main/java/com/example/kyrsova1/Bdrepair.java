@@ -22,7 +22,7 @@ public class Bdrepair {
     private TableView<Repair> Bdreapair;
 
     @FXML
-    private TableColumn<Repair, Integer> idZaphasti;
+    private TableColumn<Repair, Integer> idColumn2;
 
     @FXML
     private TableColumn<Repair, String> Name_zaphacti;
@@ -54,7 +54,7 @@ public class Bdrepair {
             stage.show();
         });
 
-        idZaphasti.setCellValueFactory(new PropertyValueFactory<>("idzaphasti"));
+        idColumn2.setCellValueFactory(new PropertyValueFactory<>("idzaphasti"));
         Name_zaphacti.setCellValueFactory(new PropertyValueFactory<>("Name"));
         kolvo.setCellValueFactory(new PropertyValueFactory<>("Kolvo"));
         marka.setCellValueFactory(new PropertyValueFactory<>("marka"));

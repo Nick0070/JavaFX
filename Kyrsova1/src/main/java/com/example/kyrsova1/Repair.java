@@ -10,7 +10,7 @@ public class Repair extends Const {
 
     // Геттеры и сеттеры для полей
 
-    public int getIdZapchasti() {
+    public int getIdZaphasti() {
         return idzaphasti;
     }
 
