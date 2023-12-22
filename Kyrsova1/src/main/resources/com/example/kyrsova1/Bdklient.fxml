@@ -36,6 +36,16 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
+            <TableView layoutX="125.0" layoutY="90.0" prefHeight="251.0" prefWidth="724.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="idКлиент" />
+                <TableColumn prefWidth="75.0" text="Имя" />
+                  <TableColumn prefWidth="119.0" text="Фамилия" />
+                  <TableColumn prefWidth="137.0" text="Отчество" />
+                  <TableColumn prefWidth="162.0" text="Марка авто" />
+                  <TableColumn prefWidth="155.0" text="Гос номер" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>
