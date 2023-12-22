@@ -18,10 +18,10 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }
+
 }
 
 

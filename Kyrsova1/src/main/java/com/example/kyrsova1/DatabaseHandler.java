@@ -5,6 +5,30 @@ package com.example.kyrsova1;
 public class DatabaseHandler extends Config {
     Connection dbConnection;
 
+    // Метод для удаления клиента по ID
+    public void deleteClient(int clientId) {
+        String deleteQuery = "DELETE FROM " + Const.CLIENT_TABLE + " WHERE " + Const.CLIENT_ID + "=?";
+        try (Connection connection = getDbConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+            preparedStatement.setInt(1, clientId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Метод для удаления клиента по ID
+    public void deleteParts(int partsid) {
+        String deleteQuery = "DELETE FROM " + Const.PARTS_TABLE + " WHERE " + Const.PARTS_ID + "=?";
+        try (Connection connection = getDbConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+            preparedStatement.setInt(1, partsid);
+            preparedStatement.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     ///Запрос данных из бд, таблица клиент
     public ResultSet getClientData() {
         ResultSet resSet = null;
@@ -13,7 +37,6 @@ public class DatabaseHandler extends Config {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             resSet = prSt.executeQuery();
         } catch (SQLException | ClassNotFoundException e) {
-            System.err.println("Error while getting client data: " + e.getMessage());
             e.printStackTrace();
         }
         return resSet;
@@ -27,12 +50,10 @@ public class DatabaseHandler extends Config {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             resSet = prSt.executeQuery();
         } catch (SQLException | ClassNotFoundException e) {
-            System.err.println("Error while getting client data: " + e.getMessage());
             e.printStackTrace();
         }
         return resSet;
     }
-
 
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;

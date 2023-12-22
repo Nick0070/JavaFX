@@ -1,3 +1,4 @@
+
 package com.example.kyrsova1;
 
     import javafx.fxml.FXML;
@@ -17,27 +18,25 @@ public class Bdrepair {
 
     @FXML
     private Button Back_button;
-
+    @FXML
+    private Button Button_Delet3;
     @FXML
     private TableView<Repair> Bdreapair;
-
+    @FXML
+    private TableColumn<Repair, String> kolvo;
+    @FXML
+    private TableColumn<Repair, String> marka;
     @FXML
     private TableColumn<Repair, Integer> idColumn2;
-
+    @FXML
+    private TableColumn<Repair, String> yersproizvod;
     @FXML
     private TableColumn<Repair, String> Name_zaphacti;
 
     @FXML
-    private TableColumn<Repair, String> kolvo;
-
-    @FXML
-    private TableColumn<Repair, String> marka;
-
-    @FXML
-    private TableColumn<Repair, String> yersproizvod;
-
-    @FXML
     void initialize() {
+
+        ///Кнопка возврата назад
         Back_button.setOnAction(event -> {
             Back_button.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
@@ -59,8 +58,15 @@ public class Bdrepair {
         kolvo.setCellValueFactory(new PropertyValueFactory<>("Kolvo"));
         marka.setCellValueFactory(new PropertyValueFactory<>("marka"));
         yersproizvod.setCellValueFactory(new PropertyValueFactory<>("yearproizvod"));
-
         loadRepairData();
+
+        ////Кнопка удаления из бд
+        Button_Delet3.setOnAction(event -> {
+            Repair selectedRepair = Bdreapair.getSelectionModel().getSelectedItem();
+            if (selectedRepair != null) {
+                deleteParts(selectedRepair);
+            }
+        });
     }
 
     private void loadRepairData() {
@@ -80,5 +86,12 @@ public class Bdrepair {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    ///Метод удаления строки из бд
+    private void deleteParts(Repair repair) {
+        DatabaseHandler dbHandler = new DatabaseHandler();
+        dbHandler.deleteParts(repair.getIdZaphasti());
+        Bdreapair.getItems().remove(repair);
     }
 }

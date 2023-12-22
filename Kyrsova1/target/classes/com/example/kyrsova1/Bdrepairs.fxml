@@ -36,7 +36,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <TableView fx:id="Bdreapair" layoutX="109.0" layoutY="82.0" prefHeight="282.0" prefWidth="666.0">
+            <TableView fx:id="Bdreapair" layoutX="104.0" layoutY="49.0" prefHeight="282.0" prefWidth="666.0">
               <columns>
                 <TableColumn fx:id="idColumn2" prefWidth="75.0" text="IdЗапчасти" />
                 <TableColumn fx:id="Name_zaphacti" prefWidth="188.0" text="Название" />
@@ -45,6 +45,11 @@
                   <TableColumn fx:id="yersproizvod" prefWidth="168.0" text="Год производства" />
               </columns>
             </TableView>
+            <Button fx:id="Button_Delet3" layoutX="14.0" layoutY="339.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Удалить" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

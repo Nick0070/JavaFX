@@ -12,9 +12,9 @@ package com.example.kyrsova1;
 public class MainController {
 
     @FXML
-    private Button buttonKlient;
-    @FXML
     private Button Bdrepair;
+    @FXML
+    private Button buttonKlient;
 
     @FXML
     void  initialize(){
@@ -35,7 +35,6 @@ public class MainController {
             stage.setScene(new Scene(root));
             stage.show();
         }  );
-        /////////////////////////////////////////////////
 
         //Кнопка перехода на экран с бд запчастей
         Bdrepair.setOnAction(event ->{
@@ -53,7 +52,6 @@ public class MainController {
             stage.setScene(new Scene(root));
             stage.show();
         }  );
-        /////////////////////////////////////////////////
     }
 }
 
