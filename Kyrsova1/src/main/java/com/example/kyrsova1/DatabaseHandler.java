@@ -55,6 +55,41 @@ public class DatabaseHandler extends Config {
         return resSet;
     }
 
+    // Добавление в бд клиента
+    public void signUpUser(String firstName, String lastName, String patronomik, String carName, String carNumber)
+            throws SQLException, ClassNotFoundException {
+        String insert = "INSERT INTO " + Const.CLIENT_TABLE + "(" +
+                Const.CLIENT_NAME + ", " + Const.CLIENT_SEARNAME + ", " +
+                Const.CLIENT_PATRONOMIK + ", " + Const.CLIENT_CARNAME + ", " +
+                Const.CLIENT_CARNUMBER + ")" +
+                "VALUES(?,?,?,?,?)";
+        PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+        prSt.setString(1, firstName);
+        prSt.setString(2, lastName);
+        prSt.setString(3, patronomik);
+        prSt.setString(4, carName);
+        prSt.setString(5, carNumber);
+
+        prSt.executeUpdate();
+    }
+
+    // Добавление в бд запчастей
+    public void signUpParts(String partsName, String kolvoParts, String markaParts, String yerasParts)
+            throws SQLException, ClassNotFoundException {
+        String insert = "INSERT INTO " + Const.PARTS_TABLE + "(" +
+                Const.PARTS_NAME + ", " + Const.PARTS_KOL + ", " +
+                Const.PARTS_MARKA + ", " + Const.PARTS_YEAR + ")" +
+                "VALUES(?,?,?,?)";
+        PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+        prSt.setString(1, partsName);
+        prSt.setString(2, kolvoParts);
+        prSt.setString(3, markaParts);
+        prSt.setString(4, yerasParts);
+
+        prSt.executeUpdate();
+    }
+
+    ///Подключение к бд
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -62,6 +97,7 @@ public class DatabaseHandler extends Config {
         return dbConnection;
     }
 
+    ///Получение информации из таблицы пользователи
     public ResultSet getUser(User user) {
         ResultSet resSet = null;
         String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USER_LOGIN + "=? AND " + Const.USER_Pass + "=?";
