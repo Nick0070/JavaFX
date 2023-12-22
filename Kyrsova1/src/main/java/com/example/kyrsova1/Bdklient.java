@@ -21,6 +21,8 @@ public class Bdklient {
     @FXML
     private Button button_delet;
     @FXML
+    private Button Button_add_klient1;
+    @FXML
     private TableView<Client> TableKlient;
     @FXML
     private TableColumn<Client, Integer> idColumn;
@@ -37,6 +39,22 @@ public class Bdklient {
 
     @FXML
     void initialize() {
+
+        ///Кнопка перехода на окно добавления
+        Button_add_klient1.setOnAction(event -> {
+            Button_add_klient1.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Bdklient_add.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
 
         ///Кнопка возврата назад
         Back_button.setOnAction(event -> {

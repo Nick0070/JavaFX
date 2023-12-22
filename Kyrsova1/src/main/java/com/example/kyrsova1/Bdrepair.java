@@ -21,6 +21,8 @@ public class Bdrepair {
     @FXML
     private Button Button_Delet3;
     @FXML
+    private Button Button_add_Parts1;
+    @FXML
     private TableView<Repair> Bdreapair;
     @FXML
     private TableColumn<Repair, String> kolvo;
@@ -36,6 +38,22 @@ public class Bdrepair {
     @FXML
     void initialize() {
 
+        ///Кнопка добавленя в бд
+        Button_add_Parts1.setOnAction(event -> {
+            Button_add_Parts1.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Bdrepairs_add.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
         ///Кнопка возврата назад
         Back_button.setOnAction(event -> {
             Back_button.getScene().getWindow().hide();
@@ -46,7 +64,6 @@ public class Bdrepair {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
             Parent root = loader.getRoot();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
