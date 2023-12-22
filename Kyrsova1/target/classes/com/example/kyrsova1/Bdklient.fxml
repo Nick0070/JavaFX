@@ -36,6 +36,16 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
+            <TableView fx:id="TableKlient" layoutX="90.0" layoutY="86.0" prefHeight="251.0" prefWidth="724.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="idКлиент" />
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Имя" />
+                  <TableColumn fx:id="searnameColumn" prefWidth="119.0" text="Фамилия" />
+                  <TableColumn fx:id="patronomikColumn" prefWidth="137.0" text="Отчество" />
+                  <TableColumn fx:id="carnameColumn" prefWidth="162.0" text="Марка авто" />
+                  <TableColumn fx:id="carnumberColumn" prefWidth="155.0" text="Гос номер" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>

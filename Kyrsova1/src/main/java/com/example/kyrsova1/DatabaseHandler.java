@@ -5,6 +5,19 @@ package com.example.kyrsova1;
 public class DatabaseHandler extends Config {
     Connection dbConnection;
 
+    public ResultSet getClientData() {
+        ResultSet resSet = null;
+        String select = "SELECT * FROM " + Const.CLIENT_TABLE;
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            System.err.println("Error while getting client data: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
         Class.forName("com.mysql.cj.jdbc.Driver");
