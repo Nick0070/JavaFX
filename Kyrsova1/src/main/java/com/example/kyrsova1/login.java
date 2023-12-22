@@ -10,6 +10,7 @@ package com.example.kyrsova1;
     import java.sql.SQLException;
     import javafx.fxml.FXMLLoader;
     import javafx.scene.control.Button;
+    import javafx.scene.control.Control;
     import javafx.scene.control.TextField;
 
 public class login {
@@ -19,6 +20,8 @@ public class login {
     private TextField logintextfield;
     @FXML
     private TextField passtextfield;
+    private Control b;
+
     @FXML
     void initialize() {
 
@@ -28,9 +31,7 @@ public class login {
 
             if (!enteredLogin.equals("") && !enteredPassword.equals("")){
                 loginUser(enteredLogin,enteredPassword );
-            }  else
-                System.out.println("Eror");
-                opennewscen("Main.fxml");
+            }  else  System.out.println("Eror");
         });
     }
 
